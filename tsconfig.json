@@ -14,9 +14,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "paths": { "@/*": ["src/*"] }
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["**/*.ts", "**/*.js", "**/*.tsx", "**/*.jsx"],
   "exclude": ["node_modules"]
