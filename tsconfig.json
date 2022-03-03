@@ -16,6 +16,6 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["**/*.ts", "**/*.js", "**/*.tsx", "**/*.jsx"],
+  "include": ["**/*.ts", "**/*.js"],
   "exclude": ["node_modules"]
 }
