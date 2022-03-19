@@ -1,10 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "module": "ES2020",
-    "target": "ESNext",
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
-    "lib": ["ESNext", "dom", "dom.iterable"],
+    "lib": ["esnext", "dom", "dom.iterable"],
     "strict": true,
     "noEmit": true,
     "allowJs": true,
@@ -12,10 +12,13 @@
     "incremental": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] }
   },
-  "include": ["**/*.ts", "**/*.js"],
-  "exclude": ["node_modules"]
+  "include": ["src"],
+  "references": [{ "path": "tsconfig.node.json" }]
 }
