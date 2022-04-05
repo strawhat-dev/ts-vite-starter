@@ -4,7 +4,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "composite": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "jest.config.ts", "tsconfig.json"]
 }

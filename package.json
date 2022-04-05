@@ -9,7 +9,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "start": "vite preview",
-    "lint": "eslint src --ext .js,.ts"
+    "lint": "eslint src --ext .js,.ts",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "latest",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "latest",
+    "@types/jest": "latest",
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
@@ -25,7 +27,11 @@
     "eslint-config-prettier": "latest",
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-import": "latest",
+    "eslint-plugin-jest": "latest",
+    "jest": "latest",
     "prettier": "latest",
+    "ts-jest": "latest",
+    "ts-node": "latest",
     "typescript": "latest",
     "vite": "latest"
   }

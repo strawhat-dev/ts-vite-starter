@@ -3,7 +3,6 @@ export const sleep = (ms: number) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-// pythonic range
 export const range = (n: number, stop?: number, step?: number) => {
   step ??= 1;
   [stop, n] = stop === undefined ? [0, n] : [n, stop];
@@ -13,11 +12,22 @@ export const range = (n: number, stop?: number, step?: number) => {
   );
 };
 
-// inclusive range
 export const irange = (n: number, stop?: number, step?: number) => {
   step ??= 1;
   [stop, n] = stop === undefined ? [0, n] : [n, stop];
   return [...Array(~~((n - stop) / step) + 1).keys()].map(
     (n) => stop! + n * step!
   );
+};
+
+export const getRandomNum = (n: number, stop?: number) => {
+  const [min, max] = stop === undefined ? [0, n] : [n, stop];
+  return Math.random() * (max - min) + min;
+};
+
+export const getRandomInt = (n: number, stop?: number) => {
+  const [min, max] =
+    stop === undefined ? [0, Math.floor(n)] : [Math.ceil(n), Math.floor(stop)];
+
+  return Math.floor(Math.random() * (max - min + 1) + min);
 };

@@ -1,29 +1,23 @@
 # https://typescript-eslint.io/docs/linting/
 root: true
-env:
-  node: true
-  es2022: true
-  browser: true
+env: { node: true, es2022: true, browser: true, jest: true }
 parser: '@typescript-eslint/parser'
-plugins:
-  - import
-  - '@typescript-eslint'
+plugins: [import, jest, '@typescript-eslint']
 extends:
   - eslint:recommended
   - plugin:@typescript-eslint/recommended
   - plugin:import/recommended
   - plugin:import/typescript
+  - plugin:jest/recommended
+  - plugin:jest/style
   - prettier
 parserOptions:
   sourceType: module
   ecmaVersion: latest
+  ecmaFeatures: { impliedStrict: true }
 settings:
+  import/parsers: { '@typescript-eslint/parser': [.ts] }
   import/resolver:
     typescript:
       alwaysTryTypes: true
-      project:
-        - tsconfig.json
-        - tsconfig.node.json
-  import/parsers:
-    '@typescript-eslint/parser':
-      - '.ts'
+      project: [tsconfig.json, tsconfig.node.json]
